@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fruit up, alcohol down: how Scotland's shopping baskets have changed since 2001</title>
+  <meta name="description" content="How household food purchases in Scotland changed between 2001 and 2025.">
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+  <!-- Header: logo (save the logo as images/logo-scotsman.png) -->
+  <header class="site-header">
+    <img class="logo" src="images/logo-The-Scotsman.png" alt="The Scotsman" width="300">
+     <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to night mode">&#9790;</button>
+  </header>
+
+  <main id="article">
+    <!-- Title + standfirst -->
+    <section class="title-block">
+      <h1>Fruit up, alcohol down: how Scotland's shopping baskets have changed since 2001</h1>
+      <p class="standfirst">Scots now spend 72% more on food and drink at home than in 2001, in cash terms. But the real story is what is going into the basket.</p>
+      <p class="byline">By Loane Besson. Data: Defra, Living Costs and Food Survey (Family Food), Scotland.</p>
+    </section>
+
+    <!-- Article -->
+    <article class="text-block">
+      <p>Few of us will forget 2020. Restaurants closed, takeaways went quiet and our kitchens became the centre of daily life. In Scotland, spending on eating out fell from 1,093p per person per week in 2019-20 to just 247p in 2020-21.</p>
+      <p>But Covid is only one chapter. So how have food purchases in Scottish households evolved between 2001 and 2025?</p>
+
+      <h2>More money, mostly spent at home</h2>
+      <p>In 2001-02, the average Scot spent 2,226p a week on food and drink for the home. By 2024-25, that had reached 3,820p: a rise of 72%. Figure 1 shows the trend. The grey line marks the 2008 financial crisis, the orange dot marks Covid and the red band marks the inflation surge of 2021-22 to 2022-23. These are cash figures: part of the rise is simply higher prices.</p>
+      <figure>
+        <img src="images/1_household_purchases-V2.png" width="1800" height="1040"
+             alt="Line chart: household food and drink purchases in Scotland rise from 2,226 p to 3,820 p per person per week between 2001-02 and 2024-25.">
+        <figcaption>Figure 1. Household food and drink purchases in Scotland, in pence per person per week, current prices.</figcaption>
+      </figure>
+
+      <h2>A basket with less alcohol and more fruit and veg</h2>
+      <p>Figure 2 compares each group's share of the basket in 2001-02 and 2024-25. Meat products remain the biggest item, but slip from 17.7% to 16.1%. Alcohol comes second and falls from 12.7% to 8.6%, even though we spend more on it in cash terms. Fruit rises from 6.1% to 7.8% and vegetables from 6.2% to 8.0%.</p>
+      <figure>
+        <img src="images/2_basket_shares.png" width="1800" height="1200"
+             alt="Horizontal bar chart comparing the share of the ten main food groups in the Scottish basket in 2001-02 and 2024-25.">
+             
+        <figcaption>Figure 2. Share of the 10 biggest food groups in household purchases.</figcaption>
+      </figure>
+
+      <h2>Four products, four stories</h2>
+      <p>Four products show how our habits are shifting. Choose a product and a start year in Figure 3 to explore them. Hover over the line to see each year, or click a point to read more.</p>
+    </article>
+
+    <!-- Interactive chart (Chart.js) -->
+    <section class="chart-block" aria-labelledby="chart-title">
+      <h2 id="chart-title">Figure 3. Four products in Scottish baskets</h2>
+      <p class="chart-subtitle">Pence per person per week, current prices.</p>
+
+      <div class="controls">
+        <fieldset>
+          <legend>Choose a product</legend>
+          <div id="product-buttons" class="button-row"></div>
+        </fieldset>
+        <div class="range">
+          <label for="start-year">Start year: <output id="start-year-output" for="start-year">2001-02</output></label>
+          <input type="range" id="start-year" min="0" max="23" value="0">
+        </div>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="product-chart" role="img" aria-label="Line chart of weekly spending on the selected product"></canvas>
+      </div>
+      <p id="chart-summary" class="chart-summary" aria-live="polite"></p>
+      <p id="chart-detail" class="chart-detail" aria-live="polite">Click a point on the line for details.</p>
+      <p id="chart-note" class="chart-note"></p>
+    </section>
+
+    <!-- Rest of the article -->
+    <article class="text-block">
+      <h2>What the numbers cannot tell us</h2>
+      <p>These figures measure spending, not what we eat. A higher figure can mean more food, better quality or simply higher prices. They are averages for Scotland, based on a household survey, so some small categories are less precise. They cover shopping for the home, not meals out.</p>
+
+      <h2>The basket in 2025</h2>
+      <p>Since 2001, Scottish households have spent more on food and drink at home. They have put a little more fruit and veg in the basket and a smaller share into alcohol. Low-calorie drinks and plant-based milks have gained ground. But convenience food such as pizza has not gone away. Our baskets are changing: slowly, but clearly.</p>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <nav aria-label="About us">
+        <h2>About us</h2>
+        <ul><li><a href="#">Jobs</a></li><li><a href="#">Announcement</a></li><li><a href="#">The Scotsman Archives</a></li></ul>
+      </nav>
+      <nav aria-label="Useful links">
+        <h2>Useful links</h2>
+        <ul><li><a href="#">Contact us</a></li><li><a href="#">Events</a></li><li><a href="#">Newsletter</a></li></ul>
+      </nav>
+      <nav aria-label="Social networks">
+        <h2>Follow us</h2>
+        <ul class="social">
+          <li><a href="#" aria-label="Facebook">f</a></li>
+          <li><a href="#" aria-label="Instagram">ig</a></li>
+          <li><a href="#" aria-label="X">X</a></li>
+          <li><a href="#" aria-label="LinkedIn">in</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="source">Source: Defra, Living Costs and Food Survey, Family Food datasets (Countries and regions, expenditure).</p>
+  </footer>
+    <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top" hidden>&#8593;</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="JS/data.js"></script>
+  <script src="JS/script.js"></script>
+</body>
+</html>
